@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package 
+  xmlns="http://www.idpf.org/2007/opf" 
+  unique-identifier="bookid" 
+  version="3.0" 
+  prefix="rendition: http://www.idpf.org/vocab/rendition/# ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/" xmlns:epub="http://www.idpf.org/2007/ops" xmlns:ibooks="http://apple.com/ibooks/html-extensions"
+>
+  <metadata 
+    xmlns:opf="http://www.idpf.org/2007/opf" 
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+  >
+    <!-- iBooks上で表示されるタイトル -->
+    <dc:title>ePub3 for iBooks(タイトル)</dc:title> 
+    <!-- iBooks上で表示される著者名 -->
+    <dc:creator>Shinichi HISAMATSU(著者名)</dc:creator>
+    <!-- 書籍を判別するための固有の値(他の書籍と重複しないようにする) -->
+    <dc:identifier id="bookid">http://totoro.ws/epub/turorial/template.epub(書籍のID)</dc:identifier>
+    <!-- 書籍の簡単な説明文 -->
+    <dc:description>epub3を作成するひな形となるファイル一式です(説明)</dc:description> 
+    <dc:language>ja</dc:language>
+
+    <!-- 最終更新日 -->
+    <meta property="dcterms:modified">2013-05-08T00:00:00Z</meta> 
+    <meta name="cover" content="cover-image" />
+    <meta property="ibooks:version">0.1</meta>
+  </metadata>
+
+  <manifest>
+    <!-- image -->
+    <item id="cover-image" href="images/cover.jpg" media-type="image/jpeg" properties="cover-image"/>
+    <!-- html -->
+    <item id="toc" href="toc.xhtml" media-type="application/xhtml+xml" properties="nav" />
+    <item id="cover" href="text/cover.xhtml" media-type="application/xhtml+xml" />
+    <item id="page1" href="text/page1.xhtml" media-type="application/xhtml+xml" />
+    <item id="page2" href="text/page2.xhtml" media-type="application/xhtml+xml" />
+  </manifest>
+
+  <spine>
+    <itemref idref="cover" />
+    <itemref idref="page1" />
+    <itemref idref="page2" />
+  </spine>
+</package>
