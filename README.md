@@ -1,4 +1,4 @@
-# Make e-books
+# e-book-example
 
 EPUBの作成
 
